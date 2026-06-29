@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "${HOST_PORT:-18080}:8080"
+    environment:
+      - LUA_ENV=production
+    restart: always
+
+  test:
+    build:
+      context: .
+    environment:
+      - LUA_ENV=test
+    command: busted tests/

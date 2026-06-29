@@ -1,0 +1,20 @@
+# Lua
+*.lua.bak
+*.lua.tmp
+*.lua.old
+
+# Rock/Dependency related
+rocks/
+*.lock
+*.rockspec_lock
+.venv/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Testing
+tests/coverage/

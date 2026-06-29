@@ -1,0 +1,58 @@
+{
+  "_type": "export",
+  "data": {
+    "_type": "collection",
+    "expiration": 0,
+    "id": "lua-api-template-insomnia",
+    "name": "Lua API Template",
+    "description": "API endpoints for the Lua Microservice Template",
+    "settings": {
+      "privately_visible_folders": []
+    },
+    "resources": [
+      {
+        "_type": "request",
+        "parentId": "wrk_123456789",
+        "name": "Health Check",
+        "method": "GET",
+        "url-settings": {
+          "request_method": "GET",
+          "url": "http://localhost:8080/health",
+          "query": []
+        },
+        "body": {
+          "type": "none"
+        },
+        "authentication": {},
+        "headers": [],
+        "response": {}
+      },
+      {
+        "_type": "request",
+        "parentId": "wrk_123456789",
+        "name": "Welcome Message",
+        "method": "GET",
+        "url-settings": {
+          "request_method": "GET",
+          "url": "http://localhost:8080/",
+          "query": []
+        },
+        "body": {
+          "type": "none"
+        },
+        "authentication": {},
+        "headers": [],
+        "response": {}
+      }
+    ],
+    "folders": [
+      {
+        "_type": "folder",
+        "parentId": "wrk_123456789",
+        "name": "Endpoints",
+        "description": ""
+      }
+    ]
+  },
+  "context": {}
+}

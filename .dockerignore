@@ -1,0 +1,11 @@
+.git
+.github
+.venv
+rocks
+tests/coverage
+docker-compose.override.yml
+*.lua.bak
+*.lua.tmp
+*.lua.old
+.DS_Store
+Thumbs.db
