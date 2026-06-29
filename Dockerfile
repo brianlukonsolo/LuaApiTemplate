@@ -7,23 +7,23 @@ RUN apk add --no-cache \
     build-base \
     ca-certificates \
     linux-headers \
-    lua5.4 \
-    lua5.4-dev \
-    luarocks5.4 \
+    lua5.1 \
+    lua5.1-dev \
+    luarocks5.1 \
     m4 \
     openssl-dev \
     zlib-dev
 
 ENV LUA_PATH="/app/src/?.lua;/app/?.lua;;"
-ENV LUA_CPATH="/usr/local/lib/lua/5.4/?.so;;"
+ENV LUA_CPATH="/usr/local/lib/lua/5.1/?.so;;"
 
 COPY api-template-1.0-1.rockspec .
 
-RUN luarocks-5.4 install --only-deps api-template-1.0-1.rockspec
-RUN luarocks-5.4 install busted
+RUN luarocks-5.1 install --only-deps api-template-1.0-1.rockspec
+RUN luarocks-5.1 install busted
 
 COPY . .
 
 EXPOSE 8080
 
-CMD ["lua5.4", "src/main.lua"]
+CMD ["lua5.1", "src/main.lua"]

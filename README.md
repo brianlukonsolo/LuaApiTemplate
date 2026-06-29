@@ -4,7 +4,7 @@ A small Lua API service template that runs in Docker and uses maintained Lua lib
 
 ## What Is Included
 
-- Docker-based Lua 5.4 runtime on Alpine.
+- Docker-based Lua 5.1 runtime on Alpine.
 - `lua-http` for HTTP server behavior instead of hand-written socket parsing.
 - `dkjson` for JSON encoding.
 - `busted` test runner.
@@ -51,9 +51,9 @@ Handlers receive a request table with `method`, `path`, and `headers`, and retur
 
 ## Local Development
 
-Docker is the supported path. If you run locally, install Lua 5.4, LuaRocks for Lua 5.4, and then:
+Docker is the supported path. If you run locally, install Lua 5.1, LuaRocks for Lua 5.1, and then:
 
 ```bash
-luarocks-5.4 install --only-deps api-template-1.0-1.rockspec
-lua5.4 src/main.lua
+luarocks-5.1 install --only-deps api-template-1.0-1.rockspec
+lua5.1 src/main.lua
 ```

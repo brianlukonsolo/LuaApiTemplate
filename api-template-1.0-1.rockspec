@@ -10,7 +10,7 @@ description = {
   license = "MIT"
 }
 dependencies = {
-  "lua >= 5.4, < 5.5",
+  "lua >= 5.1, < 5.2",
   "http == 0.4-0",
   "dkjson >= 2.8"
 }
